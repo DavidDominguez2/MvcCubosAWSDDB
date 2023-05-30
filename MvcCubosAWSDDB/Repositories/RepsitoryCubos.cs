@@ -30,6 +30,7 @@ namespace MvcCubosAWSDDB.Repositories {
                 Nombre = nombre
             };
             this.context.Cubos.Add(cubo);
+            await this.context.SaveChangesAsync();
         }
 
         public async Task UpdateCuboAsync(int idCubo, string nombre, string marca, string imagen, int precio) {
