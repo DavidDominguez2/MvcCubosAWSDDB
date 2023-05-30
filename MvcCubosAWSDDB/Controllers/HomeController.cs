@@ -41,7 +41,7 @@ namespace MvcCubosAWSDDB.Controllers {
             return RedirectToAction("Index", "Home");
         }
 
-        [HttpPost]
+
         public async Task<IActionResult> Delete(int id) {
             await this.repo.DeleteCuboAsync(id);
             return RedirectToAction("Index", "Home");
